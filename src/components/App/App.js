@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import './App.css';
+import data from '../../data';
+import DoorSeries from '../DoorSeries/DoorSeries';
 
 const colors = [{key: 'white', value: '#fff', text: 'White'}, {key: 'black', value: '#000', text: 'Black'}];
 
 class App extends Component {
   render() {
     return (
-      <Dropdown placeholder="Выберите цвет" search selection options={colors}/>
+      <div>
+        <DoorSeries/>
+        <Dropdown placeholder="Выберите цвет" search selection options={colors}/>
+      </div>
     );
   }
 }
