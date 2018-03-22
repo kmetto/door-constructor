@@ -1,13 +1,13 @@
+// @flow
+
 import React, { Component } from 'react';
 import { Dropdown } from 'semantic-ui-react';
-import data from '../../data';
+import type { OptionItem } from '../../types/OptionItem';
 
-class DoorSeries extends Component {
+export default class DoorSeries extends Component<{series: Array<OptionItem>}> {
   render() {
     return (
-      <Dropdown placeholder="Серия дверей" search selection options={data.doorSeries}/>
+      <Dropdown placeholder="Серия дверей" search selection options={this.props.series} />
     );
   }
-};
-
-export default DoorSeries;
+}

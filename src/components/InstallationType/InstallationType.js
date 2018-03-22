@@ -1,12 +1,12 @@
+// @flow
+
 import React, { Component } from 'react';
 import { Dropdown } from 'semantic-ui-react';
-import data from '../../data';
+import type { OptionItem } from '../../types/OptionItem';
 
-class InstallationType extends Component{
+class InstallationType extends Component<{installTypes: Array<OptionItem>}> {
   render() {
-    return (
-      <Dropdown placeholder="Тип установки" search selection options={data.installing}/>
-    );
+    return <Dropdown placeholder="Тип установки" search selection options={this.props.installTypes} />;
   }
 }
 
