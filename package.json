@@ -18,7 +18,7 @@
     "flow start": "flow start",
     "flow stop": "flow stop",
     "flow status": "flow status",
-    "flow coverage": "flow coverage"
+    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -x 'src/**/*.test.js'"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
@@ -27,6 +27,7 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "flow-bin": "^0.68.0"
+    "flow-bin": "^0.68.0",
+    "flow-coverage-report": "^0.5.0"
   }
 }
