@@ -4,3 +4,10 @@ export function setSeries(series) {
         result: series
     }
 }
+
+export function setInstallType(series) {
+    return {
+        type: 'SET_INSTALL_TYPE',
+        result: series
+    }
+}

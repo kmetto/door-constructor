@@ -53,6 +53,11 @@ function material(state = { linen: 0, trim: 0, overlays: 0, glass: 0 }, action) 
 function box(state = { material: 0, instaltionType: 0 }, action) {
     switch (action.type) {
 
+        case 'SET_INSTALL_TYPE':
+            return {
+                ...state,
+                instaltionType: action.result
+            }
         default:
             return state;
     }
