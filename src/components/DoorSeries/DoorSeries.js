@@ -12,9 +12,8 @@ let DoorSeries = ({ dispatch, series }) => {
         search
         selection
         options={series}
-        onChange={(val) => {
-          console.log(val)
-          // dispatch(setSeries(val))
+        onChange={(e, component) => {
+          dispatch(setSeries(component.value))
         }}
     />
   )
