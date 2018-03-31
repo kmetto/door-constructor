@@ -1,34 +1,6 @@
 import { combineReducers } from 'redux';
 import { setSeries } from './actions';
 
-const initialState = {
-    series,
-    designFront,
-    designRear,
-    lockType,
-    penType,
-    materialFront: {
-        linen,
-        trim,
-        overlays,
-        glass
-    },
-    materialRear: {
-        linen,
-        trim,
-        overlays,
-        glass
-    },
-    box: {
-        material,
-        instaltionType
-    },
-    size: {
-        height,
-        width
-    }
-}
-
 function series(state = 0, action) {
     switch (action.type) {
         case 'SET_SERIES':
@@ -98,7 +70,7 @@ function size(state = { height, width }, action) {
 
 /** Without combiner it look like that
 
-    export default function store(state = initialState, action) {
+    export default function store(state = {}, action) {
         return {
             series: series(state.series, action),
             designFront: designFront(state.designFront, action),
@@ -114,7 +86,7 @@ function size(state = { height, width }, action) {
 
  */
 
-export default const store = combineReducers({
+export default const reducers = combineReducers({
     series,
     designFront,
     designRear,
@@ -126,4 +98,4 @@ export default const store = combineReducers({
     size
 })
 
-export default store;
+export default reducers;
