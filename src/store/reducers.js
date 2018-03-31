@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { setSeries } from './actions';
 
 function series(state = 0, action) {
     switch (action.type) {

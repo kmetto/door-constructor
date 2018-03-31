@@ -6,15 +6,19 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import constructorApp from './store/reducers';
+import { setSeries } from './store/actions'
 
-let store = createStore(constructorApp)
+import store from './store';
+
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+)
+
+store.dispatch(setSeries(3))
+unsubscribe();
+
 render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
+    <App />,
     document.getElementById('root')
 );
 registerServiceWorker();
