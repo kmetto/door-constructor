@@ -1,28 +1,51 @@
-.App {
-  text-align: center;
+:root {
+  --main-border-style: 1px solid #e0e0e0;
+  --gutter-size-xs: 8px;
+  --gutter-size-x: 16px;
+  --gutter-size-xl: 32px;
+  --font-size-xs: 12px;
+  --font-size-x: 16px;
+  --font-size-xl: 18px;
+  --font-color: gray;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#root {
+  height: 100%;
+  font-size: var(--font-size-x);
+  color: var(--font-color);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.app-base-grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+aside {
+  display: flex;
+  flex-flow: column nowrap;
+  border-right: var(--main-border-style);
+  padding: var(--gutter-size-x) 0
 }
 
-.App-intro {
-  font-size: large;
+/* form-unit styles */
+.form-unit {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: var(--gutter-size-x) var(--gutter-size-xl);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.form-unit label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  margin-bottom: var(--gutter-size-xs);
+}
+
+/* door code styles */
+.door-code {
+  width: 100%;
+  border-bottom: var(--main-border-style);
+  padding: var(--gutter-size-x);
+  text-align: center
 }

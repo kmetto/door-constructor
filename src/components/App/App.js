@@ -10,11 +10,15 @@ import CurrentCode from '../../containers/CurrentCode/CurrentCode';
 export default class App extends Component<{}> {
   render() {
     return (
-      <div>
-        <DoorSeries series={data.doorSeries} />
-        <InstallationType installTypes={data.installing} />
-        <CurrentCode />
-      </div>
+      <section className="app-base-grid">
+        <aside>
+          <DoorSeries series={data.doorSeries}/>
+          <InstallationType installTypes={data.installing} />
+        </aside>
+        <section>
+          <CurrentCode />
+        </section>
+      </section>
     );
   }
 }

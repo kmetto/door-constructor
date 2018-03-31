@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DoorCode = ({ code }) => (
-  <div> {code} </div>
+  <div className="door-code"> {code} </div>
 );
 
 DoorCode.propTypes = {
