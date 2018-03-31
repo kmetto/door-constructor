@@ -43,7 +43,7 @@ function penType(state = 0, action) {
     }
 }
 
-function material(state = { linen, trim, overlays, glass }, action) {
+function material(state = { linen: 0, trim: 0, overlays: 0, glass: 0 }, action) {
     switch (action.type) {
 
         default:
@@ -51,7 +51,7 @@ function material(state = { linen, trim, overlays, glass }, action) {
     }
 }
 
-function box(state = { material, instaltionType }, action) {
+function box(state = { material: 0, instaltionType: 0 }, action) {
     switch (action.type) {
 
         default:
@@ -59,7 +59,7 @@ function box(state = { material, instaltionType }, action) {
     }
 }
 
-function size(state = { height, width }, action) {
+function size(state = { height: 0, width: 0 }, action) {
     switch (action.type) {
 
         default:
@@ -86,7 +86,7 @@ function size(state = { height, width }, action) {
 
  */
 
-export default const reducers = combineReducers({
+const reducers = combineReducers({
     series,
     designFront,
     designRear,
