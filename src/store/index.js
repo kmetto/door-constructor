@@ -2,31 +2,32 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 
 const initialState = {
-    series,
-    designFront,
-    designRear,
-    lockType,
-    penType,
+    series: 0,
+    designFront: 0,
+    designRear: 0,
+    lockType: 0,
+    penType: 0,
     materialFront: {
-        linen,
-        trim,
-        overlays,
-        glass
+        linen: 0,
+        trim: 0,
+        overlays: 0,
+        glass: 0
     },
     materialRear: {
-        linen,
-        trim,
-        overlays,
-        glass
+        linen: 0,
+        trim: 0,
+        overlays: 0,
+        glass: 0
     },
     box: {
-        material,
-        instaltionType
+        material: 0,
+        instaltionType: 0
     },
     size: {
-        height,
-        width
+        height: 0,
+        width: 0
     }
 }
 
-let store = createStore(reducers, initialState)
+const reduxDevtoolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;
+export default createStore(reducers, initialState, reduxDevtoolsExtension && reduxDevtoolsExtension())
