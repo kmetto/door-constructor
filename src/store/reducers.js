@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 function series(state = 0, action) {
     switch (action.type) {
         case 'SET_SERIES':
+            debugger
             return action.result
 
         default:

@@ -7,7 +7,6 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { setSeries } from './store/actions';
 import store from './store';
 
 render(
