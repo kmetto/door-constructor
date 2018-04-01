@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './DoorCode.css';
 
 const DoorCode = ({ code }) => (
@@ -54,9 +53,5 @@ const DoorCode = ({ code }) => (
 
   </div>
 );
-
-// DoorCode.propTypes = {
-//   code: PropTypes.string.isRequired
-// };
 
 export default DoorCode;

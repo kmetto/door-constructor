@@ -1,32 +1,34 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Dropdown } from 'semantic-ui-react';
-import { setInstallType } from '../../store/actions';
+import { setFrontPenType } from '../../store/actions';
 import PropTypes from 'prop-types';
 
-let InstallationType = ({ dispatch, installTypes }) => {
+let PenType = ({ dispatch, penTypes }) => {
   return (
     <div className="form-unit">
+      <label htmlFor="pen-type">Тип ручки</label>
       <Dropdown
+          name="pen-type"
           placeholder="Тип установки"
           search
           selection
-          options={installTypes}
+          options={penTypes}
           onChange={(e, component) => {
-            dispatch(setInstallType(component.value))
+            dispatch(setFrontPenType(component.value))
           }}
       />
     </div>
   )
 };
 
-InstallationType.propTypes = {
-  installTypes: PropTypes.arrayOf(PropTypes.shape({
+PenType.propTypes = {
+  penTypes: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
   }).isRequired).isRequired,
 };
 
-InstallationType = connect()(InstallationType);
+PenType = connect()(PenType);
 
-export default InstallationType;
+export default PenType;

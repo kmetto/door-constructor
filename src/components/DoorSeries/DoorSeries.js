@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 let DoorSeries = ({ dispatch, series }) => {
   return (
     <div className="form-unit">
-      <label>Серия дверей</label>
       <Dropdown
           placeholder="Серия дверей"
           search

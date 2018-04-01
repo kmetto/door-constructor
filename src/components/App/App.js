@@ -8,49 +8,65 @@ import InstallationType from '../InstallationType/InstallationType';
 import PenType from '../PenType/PenType';
 import LockType from '../LockType/LockType';
 import CurrentCode from '../../containers/CurrentCode/CurrentCode';
+import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
-export default class App extends Component<{}> {
-  render() {
-    return (
-      <section className="app-base-grid">
-        <aside>
-          <div className="fieldset series">
-            <legend>Серия дверей</legend>
-            <DoorSeries series={data.doorSeries}/>
-          </div>
+import { connect } from 'react-redux';
+import { setFrontPenType } from '../../store/actions';
+import { setRearPenType } from '../../store/actions';
+import { setLockType } from '../../store/actions';
 
-          <div className="fieldset design">
-            <legend>Дизайн</legend>
-            <InstallationType installTypes={data.installing} />
-          </div>
 
-          <div className="fieldset fittings">
-            <legend>Фурнитура</legend>
-            <LockType installTypes={data.installing} />
-            <PenType installTypes={data.installing} />
-            <PenType installTypes={data.installing} />
-          </div>
 
-          <div className="fieldset material">
-            <legend>Материал и цвет</legend>
-            <InstallationType installTypes={data.installing} />
-          </div>
+let App = ({ dispatch }) => {
 
-          <div className="fieldset box">
-            <legend>Коробка</legend>
-            <InstallationType installTypes={data.installing} />
-          </div>
-
-          <div className="fieldset size">
-            <legend>Размеры</legend>
-            <InstallationType installTypes={data.installing} />
-          </div>
-
-        </aside>
-        <section>
-          <CurrentCode />
-        </section>
-      </section>
-    );
+  function handleChageType(action) {
+    return function(value) {
+      dispatch(action(value));
+    }
   }
-}
+
+  return (
+    <section className="app-base-grid">
+      <aside>
+        <div className="fieldset series">
+          <legend>Серия дверей</legend>
+          <DoorSeries series={data.doorSeries}/>
+        </div>
+
+        <div className="fieldset design">
+          <legend>Дизайн</legend>
+          <InstallationType installTypes={data.installing} />
+        </div>
+
+        <div className="fieldset fittings">
+          <legend>Фурнитура</legend>
+          <TypeSelector options={data.locks} changeCallback={handleChageType(setLockType)} placeholder="Замок" label="Тип замка" />
+          <TypeSelector options={data.knobs} changeCallback={handleChageType(setFrontPenType)} placeholder="Наружняя ручка" label="Тип наружней ручки" />
+          <TypeSelector options={data.knobs} changeCallback={handleChageType(setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
+        </div>
+
+        <div className="fieldset material">
+          <legend>Материал и цвет</legend>
+          <InstallationType installTypes={data.installing} />
+        </div>
+
+        <div className="fieldset box">
+          <legend>Коробка</legend>
+          <InstallationType installTypes={data.installing} />
+        </div>
+
+        <div className="fieldset size">
+          <legend>Размеры</legend>
+          <InstallationType installTypes={data.installing} />
+        </div>
+
+      </aside>
+      <section>
+        <CurrentCode />
+      </section>
+    </section>
+  );
+};
+
+App = connect()(App);
+export default App;

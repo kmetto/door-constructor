@@ -29,21 +29,23 @@ function designRear(state = 0, action) {
 function fittings(state = { lockType: 0, frontPenType: 0, rearPenType: 0 }, action) {
     switch (action.type) {
 
-        default:
-            return state;
-    }
-}
+        case 'SET_LOCK_TYPE':
+            return {
+                ...state,
+                lockType: action.result
+            }
 
-function lockType(state = 0, action) {
-    switch (action.type) {
+        case 'SET_FRONT_PEN_TYPE':
+            return {
+                ...state,
+                frontPenType: action.result
+            }
 
-        default:
-            return state;
-    }
-}
-
-function penType(state = 0, action) {
-    switch (action.type) {
+        case 'SET_REAR_PEN_TYPE':
+            return {
+                ...state,
+                rearPenType: action.result
+            }
 
         default:
             return state;
