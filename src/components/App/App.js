@@ -7,14 +7,7 @@ import CurrentCode from '../../containers/CurrentCode/CurrentCode';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
 import { connect } from 'react-redux';
-import {
-  setFrontPenType,
-  setRearPenType,
-  setLockType,
-  setInstallType,
-  setSeries
-} from '../../store/actions';
-
+import { actions } from '../../store/actionFabrick';
 
 let App = ({ dispatch }) => {
 
@@ -29,7 +22,7 @@ let App = ({ dispatch }) => {
       <aside>
         <div className="fieldset series">
           <legend>Серия дверей</legend>
-          <TypeSelector options={data.doorSeries} changeCallback={handleChageType(setSeries)} placeholder="Серия дверей" label="Серия дверей" />
+          <TypeSelector options={data.doorSeries} changeCallback={handleChageType(actions.setSeries)} placeholder="Серия дверей" label="Серия дверей" />
         </div>
 
         <div className="fieldset design">
@@ -40,25 +33,25 @@ let App = ({ dispatch }) => {
 
         <div className="fieldset fittings">
           <legend>Фурнитура</legend>
-          <TypeSelector options={data.locks} changeCallback={handleChageType(setLockType)} placeholder="Замок" label="Тип замка" />
-          <TypeSelector options={data.knobs} changeCallback={handleChageType(setFrontPenType)} placeholder="Наружняя ручка" label="Тип наружней ручки" />
-          <TypeSelector options={data.knobs} changeCallback={handleChageType(setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
+          <TypeSelector options={data.locks} changeCallback={handleChageType(actions.setLockType)} placeholder="Замок" label="Тип замка" />
+          <TypeSelector options={data.knobs} changeCallback={handleChageType(actions.setFrontPenType)} placeholder="Наружняя ручка" label="Тип наружней ручки" />
+          <TypeSelector options={data.knobs} changeCallback={handleChageType(actions.setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
         </div>
 
         <div className="fieldset material">
           <legend>Материал и цвет</legend>
-          <TypeSelector options={data.knobs} changeCallback={handleChageType(setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
+          <TypeSelector options={data.materialColor} changeCallback={handleChageType(actions.setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
         </div>
 
         <div className="fieldset box">
           <legend>Коробка</legend>
-          <TypeSelector options={data.installing} changeCallback={handleChageType(setInstallType)} placeholder="Установка" label="Способ установки" />
-          <TypeSelector options={data.installing} changeCallback={handleChageType(setInstallType)} placeholder="Материал и цвет" label="Материал и цвет" />
+          <TypeSelector options={data.installing} changeCallback={handleChageType(actions.setInstallType)} placeholder="Установка" label="Способ установки" />
+          <TypeSelector options={data.installing} changeCallback={handleChageType(actions.setInstallType)} placeholder="Материал и цвет" label="Материал и цвет" />
         </div>
 
         <div className="fieldset size">
           <legend>Размеры</legend>
-          {/* <SizesInput images={[]} /> */}
+          {/* <SizesInput /> */}
         </div>
 
       </aside>
