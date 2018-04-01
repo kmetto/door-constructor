@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
+import { types } from './actionFabrick';
 
 function series(state = '0', action) {
     switch (action.type) {
-        case 'SET_SERIES':
+        case types.setSeries:
             return action.result
 
         default:
@@ -29,19 +30,19 @@ function designRear(state = '0', action) {
 function fittings(state = { lockType: '0', frontPenType: '0', rearPenType: '0' }, action) {
     switch (action.type) {
 
-        case 'SET_LOCK_TYPE':
+        case types.setLockType:
             return {
                 ...state,
                 lockType: action.result
             }
 
-        case 'SET_FRONT_PEN_TYPE':
+        case types.setFrontPenType:
             return {
                 ...state,
                 frontPenType: action.result
             }
 
-        case 'SET_REAR_PEN_TYPE':
+        case types.setRearPenType:
             return {
                 ...state,
                 rearPenType: action.result
@@ -63,7 +64,7 @@ function material(state = { linen: '0', trim: '0', overlays: '0', glass: '0' }, 
 function box(state = { material: '0', instaltionType: '0' }, action) {
     switch (action.type) {
 
-        case 'SET_INSTALL_TYPE':
+        case types.setInstallType:
             return {
                 ...state,
                 instaltionType: action.result
@@ -81,24 +82,6 @@ function size(state = { height: '0', width: '0' }, action) {
     }
 }
 
-
-/** Without combiner it look like that
-
-    export default function store(state = {}, action) {
-        return {
-            series: series(state.series, action),
-            designFront: designFront(state.designFront, action),
-            designRear: designRear(state.designRear, action),
-            lockType: lockType(state.lockType, action),
-            penType: penType(state.penType, action),
-            materialFront: material(state.materialFront, action),
-            materialRear: material(state.materialRear, action),
-            box: box(state.box, action),
-            size: size(state.size, action)
-        }
-    }
-
- */
 
 const reducers = combineReducers({
     series,

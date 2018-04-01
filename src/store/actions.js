@@ -1,34 +1,31 @@
 export function setSeries(series) {
-    return {
-        type: 'SET_SERIES',
-        result: series
-    }
+    return series;
 }
 
 export function setInstallType(install) {
-    return {
-        type: 'SET_INSTALL_TYPE',
-        result: install
-    }
+    return install;
 }
 
 export function setLockType(lock) {
-    return {
-        type: 'SET_LOCK_TYPE',
-        result: lock
-    }
+    return lock;
 }
 
 export function setFrontPenType(pen) {
-    return {
-        type: 'SET_FRONT_PEN_TYPE',
-        result: pen
-    }
+    return pen;
 }
 
 export function setRearPenType(pen) {
-    return {
-        type: 'SET_REAR_PEN_TYPE',
-        result: pen
-    }
+    return pen;
+}
+
+export function setMaterialFrontLinen(material) {
+    return material
+}
+
+export function setMaterialFrontTrim(material) {
+    return material
+}
+
+export function setMaterialFrontOverlays(material) {
+    return material
 }
