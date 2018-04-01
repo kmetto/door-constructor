@@ -20,53 +20,53 @@
     border-radius: 2px;
 }
 
-.series {
-    border-color: rgb(245, 241, 29);
+.code-part.series {
+    border-color: rgba(var(--color-series-block), 1);
 }
 
-.series:hover {
-    background-color: rgba(255, 253, 130, 0.6);
+.code-part.series:hover {
+    background-color: rgba(var(--color-series-block), 0.3);
 }
 
-.design {
-    border-color: rgba(255, 155, 113, 0.4);
+.code-part.design {
+    border-color: rgba(var(--color-design-block), 0.4);
 
 }
 
-.design:hover {
-    background-color: rgba(255, 155, 113, 0.25);
+.code-part.design:hover {
+    background-color: rgba(var(--color-design-block), 0.25);
 }
 
-.fittings {
-    border-color: rgba(232, 72, 85, 0.3);
+.code-part.fittings {
+    border-color: rgba(var(--color-fittings-block), 0.3);
 }
 
-.fittings:hover {
-    background-color: rgba(232, 72, 85, 0.15);
+.code-part.fittings:hover {
+    background-color: rgba(var(--color-fittings-block), 0.15);
 }
 
-.materialRear,
-.materialFront {
-    border-color: rgba(27, 153, 183, 0.3);
+.code-part.materialRear,
+.code-part.materialFront {
+    border-color: rgba(var(--color-material-block), 0.3);
 }
 
-.materialRear:hover,
-.materialFront:hover {
-    background-color: rgba(27, 153, 183, 0.15);
+.code-part.materialRear:hover,
+.code-part.materialFront:hover {
+    background-color: rgba(var(--color-material-block), 0.15);
 }
 
-.box {
-    border-color: rgba(70, 163, 87, 0.3);
+.code-part.box {
+    border-color: rgba(var(--color-box-block), 0.3);
 }
 
-.box:hover {
-    background-color: rgba(70, 163, 87, 0.2);
+.code-part.box:hover {
+    background-color: rgba(var(--color-box-block), 0.15);
 }
 
-.size {
-    border-color: rgba(133, 87, 161, 0.3);
+.code-part.size {
+    border-color: rgba(var(--color-size-block), 0.3);
 }
 
-.size:hover {
-    background-color: rgba(133, 87, 161, 0.17);
+.code-part.size:hover {
+    background-color: rgba(var(--color-size-block), 0.15);
 }

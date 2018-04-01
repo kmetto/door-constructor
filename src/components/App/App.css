@@ -7,6 +7,13 @@
   --font-size-x: 16px;
   --font-size-xl: 18px;
   --font-color: gray;
+
+  --color-series-block: 245, 229, 29;
+  --color-design-block: 255, 155, 113;
+--color-fittings-block: 232, 72, 85;
+--color-material-block: 27, 153, 183;
+     --color-box-block: 70, 163, 87;
+    --color-size-block: 133, 87, 161;
 }
 
 #root {
@@ -26,18 +33,82 @@ aside {
   display: flex;
   flex-flow: column nowrap;
   border-right: var(--main-border-style);
-  padding: var(--gutter-size-x) 0
+  height: 100%;
+  overflow: auto;
 }
 
 /* form-unit styles */
 .form-unit {
   display: flex;
   flex-flow: column nowrap;
-  padding: var(--gutter-size-x) var(--gutter-size-xl);
+  padding: var(--gutter-size-xs) var(--gutter-size-xl);
 }
 
 .form-unit label {
   font-size: var(--font-size-xs);
   font-weight: 600;
   margin-bottom: var(--gutter-size-xs);
+  opacity: 0.8;
+}
+
+.fieldset {
+  padding: var(--gutter-size-xs) 0;
+  border-left: 10px solid;
+}
+
+legend {
+  display: block;
+  max-width: 100%;
+  padding-left: var(--gutter-size-xl);
+  padding-bottom: var(--gutter-size-xs);
+  padding-top: var(--gutter-size-xs);
+  white-space: normal;
+}
+
+.design {
+  border-color: rgba(var(--color-design-block), 0.4);
+}
+
+.design.hightlight {
+  background-color: rgba(var(--color-design-block), 0.25);
+}
+
+.fieldset.series {
+  border-color: rgba(var(--color-series-block), 1);
+}
+
+.fieldset.series.hightlight {
+  background-color: rgba(var(--color-series-block), 0.3);
+}
+
+.fieldset.fittings {
+  border-color: rgba(var(--color-fittings-block), 0.3);
+}
+
+.fieldset.fittings.hightlight {
+  background-color: rgba(var(--color-fittings-block), 0.15);
+}
+
+.fieldset.material {
+  border-color: rgba(var(--color-material-block), 0.3);
+}
+
+.fieldset.material.hightlight {
+  background-color: rgba(var(--color-material-block), 0.15);
+}
+
+.fieldset.box {
+  border-color: rgba(var(--color-box-block), 0.3);
+}
+
+.fieldset.box.hightlight {
+  background-color: rgba(var(--color-box-block), 0.15);
+}
+
+.fieldset.size {
+  border-color: rgba(var(--color-size-block), 0.3);
+}
+
+.fieldset.size.hightlight {
+  background-color: rgba(var(--color-size-block), 0.15);
 }
