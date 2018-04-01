@@ -1,0 +1,72 @@
+.door-code {
+    width: 100%;
+    border-bottom: var(--main-border-style);
+    padding: var(--gutter-size-x);
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+.door-code span {
+    display: inline-block;
+    padding: calc(var(--gutter-size-xs) / 2) calc(var(--gutter-size-xs) / 2);
+}
+
+.code-part {
+    cursor: pointer;
+    border-bottom: 2px solid;
+    margin: 0 2px;
+    border-radius: 2px;
+}
+
+.series {
+    border-color: rgb(245, 241, 29);
+}
+
+.series:hover {
+    background-color: rgba(255, 253, 130, 0.6);
+}
+
+.design {
+    border-color: rgba(255, 155, 113, 0.4);
+
+}
+
+.design:hover {
+    background-color: rgba(255, 155, 113, 0.25);
+}
+
+.pen {
+    border-color: rgba(232, 72, 85, 0.3);
+}
+
+.pen:hover {
+    background-color: rgba(232, 72, 85, 0.15);
+}
+
+.materialRear,
+.materialFront {
+    border-color: rgba(27, 153, 183, 0.3);
+}
+
+.materialRear:hover,
+.materialFront:hover {
+    background-color: rgba(27, 153, 183, 0.15);
+}
+
+.box {
+    border-color: rgba(70, 163, 87, 0.3);
+}
+
+.box:hover {
+    background-color: rgba(70, 163, 87, 0.2);
+}
+
+.size {
+    border-color: rgba(133, 87, 161, 0.3);
+}
+
+.size:hover {
+    background-color: rgba(133, 87, 161, 0.17);
+}

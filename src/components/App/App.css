@@ -41,11 +41,3 @@ aside {
   font-weight: 600;
   margin-bottom: var(--gutter-size-xs);
 }
-
-/* door code styles */
-.door-code {
-  width: 100%;
-  border-bottom: var(--main-border-style);
-  padding: var(--gutter-size-x);
-  text-align: center
-}
