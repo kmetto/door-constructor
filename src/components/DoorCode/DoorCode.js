@@ -14,9 +14,10 @@ const DoorCode = ({ code }) => (
       <span>{code.designRear}</span>
     </div>
 
-    <div className="pen code-part">
-      <span>{code.lockType}</span>
-      <span>{code.penType}</span>
+    <div className="fittings code-part">
+      <span>{code.fittings.lockType}</span>
+      <span>{code.fittings.frontPenType}</span>
+      <span>{code.fittings.rearPenType}</span>
     </div>
 
     <span>(</span>

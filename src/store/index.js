@@ -5,8 +5,11 @@ const initialState = {
     series: 0,
     designFront: 0,
     designRear: 0,
-    lockType: 0,
-    penType: 0,
+    fittings: {
+        lockType: 0,
+        frontPenType: 0,
+        rearPenType: 0
+    },
     materialFront: {
         linen: 0,
         trim: 0,

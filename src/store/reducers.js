@@ -26,6 +26,14 @@ function designRear(state = 0, action) {
     }
 }
 
+function fittings(state = { lockType: 0, frontPenType: 0, rearPenType: 0 }, action) {
+    switch (action.type) {
+
+        default:
+            return state;
+    }
+}
+
 function lockType(state = 0, action) {
     switch (action.type) {
 
@@ -94,8 +102,7 @@ const reducers = combineReducers({
     series,
     designFront,
     designRear,
-    lockType,
-    penType,
+    fittings,
     materialFront: material,
     materialRear: material,
     box,

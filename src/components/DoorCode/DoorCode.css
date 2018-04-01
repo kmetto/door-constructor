@@ -37,11 +37,11 @@
     background-color: rgba(255, 155, 113, 0.25);
 }
 
-.pen {
+.fittings {
     border-color: rgba(232, 72, 85, 0.3);
 }
 
-.pen:hover {
+.fittings:hover {
     background-color: rgba(232, 72, 85, 0.15);
 }
 
