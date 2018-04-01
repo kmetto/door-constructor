@@ -1,11 +1,11 @@
 import React from 'react';
 import './DoorCode.css';
+import doorSeries from '../../data/door-series';
 
 const DoorCode = ({ code }) => (
   <div className="door-code">
-
     <div className="series code-part">
-      <span>{code.series}</span>
+      <span>{doorSeries.find(s => s.value === code.series).text}</span>
     </div>
 
     <div className="design code-part">

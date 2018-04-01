@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-function series(state = 0, action) {
+function series(state = '0', action) {
     switch (action.type) {
         case 'SET_SERIES':
             return action.result
@@ -10,7 +10,7 @@ function series(state = 0, action) {
     }
 }
 
-function designFront(state = 0, action) {
+function designFront(state = '0', action) {
     switch (action.type) {
 
         default:
@@ -18,7 +18,7 @@ function designFront(state = 0, action) {
     }
 }
 
-function designRear(state = 0, action) {
+function designRear(state = '0', action) {
     switch (action.type) {
 
         default:
@@ -26,7 +26,7 @@ function designRear(state = 0, action) {
     }
 }
 
-function fittings(state = { lockType: 0, frontPenType: 0, rearPenType: 0 }, action) {
+function fittings(state = { lockType: '0', frontPenType: '0', rearPenType: '0' }, action) {
     switch (action.type) {
 
         case 'SET_LOCK_TYPE':
@@ -52,7 +52,7 @@ function fittings(state = { lockType: 0, frontPenType: 0, rearPenType: 0 }, acti
     }
 }
 
-function material(state = { linen: 0, trim: 0, overlays: 0, glass: 0 }, action) {
+function material(state = { linen: '0', trim: '0', overlays: '0', glass: '0' }, action) {
     switch (action.type) {
 
         default:
@@ -60,7 +60,7 @@ function material(state = { linen: 0, trim: 0, overlays: 0, glass: 0 }, action) 
     }
 }
 
-function box(state = { material: 0, instaltionType: 0 }, action) {
+function box(state = { material: '0', instaltionType: '0' }, action) {
     switch (action.type) {
 
         case 'SET_INSTALL_TYPE':
@@ -73,7 +73,7 @@ function box(state = { material: 0, instaltionType: 0 }, action) {
     }
 }
 
-function size(state = { height: 0, width: 0 }, action) {
+function size(state = { height: '0', width: '0' }, action) {
     switch (action.type) {
 
         default:

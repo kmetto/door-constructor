@@ -3,16 +3,17 @@
 import React from 'react';
 import './App.css';
 import data from '../../data';
-import DoorSeries from '../DoorSeries/DoorSeries';
-import InstallationType from '../InstallationType/InstallationType';
 import CurrentCode from '../../containers/CurrentCode/CurrentCode';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
 import { connect } from 'react-redux';
-import { setFrontPenType } from '../../store/actions';
-import { setRearPenType } from '../../store/actions';
-import { setLockType } from '../../store/actions';
-
+import {
+  setFrontPenType,
+  setRearPenType,
+  setLockType,
+  setInstallType,
+  setSeries
+} from '../../store/actions';
 
 
 let App = ({ dispatch }) => {
@@ -28,12 +29,13 @@ let App = ({ dispatch }) => {
       <aside>
         <div className="fieldset series">
           <legend>Серия дверей</legend>
-          <DoorSeries series={data.doorSeries}/>
+          <TypeSelector options={data.doorSeries} changeCallback={handleChageType(setSeries)} placeholder="Серия дверей" label="Серия дверей" />
         </div>
 
         <div className="fieldset design">
           <legend>Дизайн</legend>
-          <InstallationType installTypes={data.installing} />
+          {/* <ImageSelector images={[]} /> */}
+          {/* <ImageSelector images={[]} /> */}
         </div>
 
         <div className="fieldset fittings">
@@ -45,17 +47,18 @@ let App = ({ dispatch }) => {
 
         <div className="fieldset material">
           <legend>Материал и цвет</legend>
-          <InstallationType installTypes={data.installing} />
+          <TypeSelector options={data.knobs} changeCallback={handleChageType(setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
         </div>
 
         <div className="fieldset box">
           <legend>Коробка</legend>
-          <InstallationType installTypes={data.installing} />
+          <TypeSelector options={data.installing} changeCallback={handleChageType(setInstallType)} placeholder="Установка" label="Способ установки" />
+          <TypeSelector options={data.installing} changeCallback={handleChageType(setInstallType)} placeholder="Материал и цвет" label="Материал и цвет" />
         </div>
 
         <div className="fieldset size">
           <legend>Размеры</legend>
-          <InstallationType installTypes={data.installing} />
+          {/* <SizesInput images={[]} /> */}
         </div>
 
       </aside>
