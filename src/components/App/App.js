@@ -1,12 +1,10 @@
 // @flow
 
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import data from '../../data';
 import DoorSeries from '../DoorSeries/DoorSeries';
 import InstallationType from '../InstallationType/InstallationType';
-import PenType from '../PenType/PenType';
-import LockType from '../LockType/LockType';
 import CurrentCode from '../../containers/CurrentCode/CurrentCode';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
