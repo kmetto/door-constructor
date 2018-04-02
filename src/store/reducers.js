@@ -11,7 +11,7 @@ function series(state = '0', action) {
     }
 }
 
-function designFront(state = '0', action) {
+function designOutside(state = '0', action) {
     switch (action.type) {
 
         default:
@@ -19,7 +19,7 @@ function designFront(state = '0', action) {
     }
 }
 
-function designRear(state = '0', action) {
+function designInside(state = '0', action) {
     switch (action.type) {
 
         default:
@@ -27,7 +27,7 @@ function designRear(state = '0', action) {
     }
 }
 
-function fittings(state = { lockType: '0', frontPenType: '0', rearPenType: '0' }, action) {
+function fittings(state = { lockType: '0', outsidePenType: '0', insidePenType: '0' }, action) {
     switch (action.type) {
 
         case types.setLockType:
@@ -36,16 +36,16 @@ function fittings(state = { lockType: '0', frontPenType: '0', rearPenType: '0' }
                 lockType: action.result
             }
 
-        case types.setFrontPenType:
+        case types.setOutsidePenType:
             return {
                 ...state,
-                frontPenType: action.result
+                outsidePenType: action.result
             }
 
-        case types.setRearPenType:
+        case types.setInsidePenType:
             return {
                 ...state,
-                rearPenType: action.result
+                insidePenType: action.result
             }
 
         default:
@@ -53,13 +53,68 @@ function fittings(state = { lockType: '0', frontPenType: '0', rearPenType: '0' }
     }
 }
 
-function material(state = { linen: '0', trim: '0', overlays: '0', glass: '0' }, action) {
+function materialOutside(state = { linen: '0', trim: '0', overlays: '0', glass: '0' }, action) {
     switch (action.type) {
+        case types.setMaterialOutsideLinen:
+            return {
+                ...state,
+                linen: action.result
+            }
+
+        case types.setMaterialOutsideTrim:
+            return {
+                ...state,
+                trim: action.result
+            }
+
+        case types.setMaterialOutsideOverlays:
+            return {
+                ...state,
+                overlays: action.result
+            }
+
+        case types.setMaterialOutsideGlass:
+            return {
+                ...state,
+                glass: action.result
+            }
 
         default:
             return state;
     }
 }
+
+function materialInside(state = { linen: '0', trim: '0', overlays: '0', glass: '0' }, action) {
+    switch (action.type) {
+        case types.setMaterialInsideLinen:
+            return {
+                ...state,
+                linen: action.result
+            }
+
+        case types.setMaterialInsideTrim:
+            return {
+                ...state,
+                trim: action.result
+            }
+
+        case types.setMaterialInsideOverlays:
+            return {
+                ...state,
+                overlays: action.result
+            }
+
+        case types.setMaterialInsideGlass:
+            return {
+                ...state,
+                glass: action.result
+            }
+
+        default:
+            return state;
+    }
+}
+
 
 function box(state = { material: '0', instaltionType: '0' }, action) {
     switch (action.type) {
@@ -85,11 +140,11 @@ function size(state = { height: '0', width: '0' }, action) {
 
 const reducers = combineReducers({
     series,
-    designFront,
-    designRear,
+    designOutside,
+    designInside,
     fittings,
-    materialFront: material,
-    materialRear: material,
+    materialOutside,
+    materialInside,
     box,
     size
 })

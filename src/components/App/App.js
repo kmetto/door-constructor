@@ -22,7 +22,11 @@ let App = ({ dispatch }) => {
       <aside>
         <div className="fieldset series">
           <legend>Серия дверей</legend>
-          <TypeSelector options={data.doorSeries} changeCallback={handleChageType(actions.setSeries)} placeholder="Серия дверей" label="Серия дверей" />
+          <TypeSelector
+            options={data.doorSeries}
+            changeCallback={handleChageType(actions.setSeries)}
+            placeholder="Серия дверей"
+            label="Серия дверей" />
         </div>
 
         <div className="fieldset design">
@@ -33,20 +37,85 @@ let App = ({ dispatch }) => {
 
         <div className="fieldset fittings">
           <legend>Фурнитура</legend>
-          <TypeSelector options={data.locks} changeCallback={handleChageType(actions.setLockType)} placeholder="Замок" label="Тип замка" />
-          <TypeSelector options={data.knobs} changeCallback={handleChageType(actions.setFrontPenType)} placeholder="Наружняя ручка" label="Тип наружней ручки" />
-          <TypeSelector options={data.knobs} changeCallback={handleChageType(actions.setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
+          <TypeSelector
+            options={data.locks}
+            changeCallback={handleChageType(actions.setLockType)}
+            placeholder="Замок"
+            label="Тип замка"
+          />
+          <TypeSelector
+            options={data.knobs}
+            changeCallback={handleChageType(actions.setOutsidePenType)}
+            placeholder="Наружняя ручка"
+            label="Тип наружней ручки"
+          />
+          <TypeSelector
+            options={data.knobs}
+            changeCallback={handleChageType(actions.setInsidePenType)}
+            placeholder="Внутренняя ручка"
+            label="Тип внутренней ручки"
+          />
         </div>
 
         <div className="fieldset material">
-          <legend>Материал и цвет</legend>
-          <TypeSelector options={data.materialColor} changeCallback={handleChageType(actions.setRearPenType)} placeholder="Внутренняя ручка" label="Тип внутренней ручки" />
+          <legend>Полотно снаружи</legend>
+          <TypeSelector
+            options={data.materialColor}
+            changeCallback={handleChageType(actions.setMaterialOutsideLinen)}
+            placeholder="Материал и цвет"
+            label="Полотно"
+          />
+          <TypeSelector
+            options={data.materialColor}
+            changeCallback={handleChageType(actions.setMaterialOutsideTrim)}
+            placeholder="Материал и цвет"
+            label="Наличник"
+          />
+          <TypeSelector
+            options={data.materialColor}
+            changeCallback={handleChageType(actions.setMaterialOutsideOverlays)}
+            placeholder="Материал и цвет"
+            label="Накладки"
+          />
+        </div>
+
+        <div className="fieldset material">
+          <legend>Полотно внутри</legend>
+          <TypeSelector
+            options={data.materialColor}
+            changeCallback={handleChageType(actions.setMaterialInsideLinen)}
+            placeholder="Материал и цвет"
+            label="Полотно"
+          />
+          <TypeSelector
+            options={data.materialColor}
+            changeCallback={handleChageType(actions.setMaterialInsideTrim)}
+            placeholder="Материал и цвет"
+            label="Наличник"
+          />
+          <TypeSelector
+            options={data.materialColor}
+            changeCallback={handleChageType(actions.setMaterialInsideOverlays)}
+            placeholder="Материал и цвет"
+            label="Накладки"
+          />
         </div>
 
         <div className="fieldset box">
           <legend>Коробка</legend>
-          <TypeSelector options={data.installing} changeCallback={handleChageType(actions.setInstallType)} placeholder="Установка" label="Способ установки" />
-          <TypeSelector options={data.installing} changeCallback={handleChageType(actions.setInstallType)} placeholder="Материал и цвет" label="Материал и цвет" />
+          <TypeSelector
+            options={data.installing}
+            changeCallback={handleChageType(actions.setInstallType)}
+            placeholder="Установка"
+            label="Способ установки"
+          />
+
+          <TypeSelector
+            options={data.installing}
+            changeCallback={handleChageType(actions.setInstallType)}
+            placeholder="Материал и цвет"
+            label="Материал и цвет"
+          />
         </div>
 
         <div className="fieldset size">

@@ -3,20 +3,20 @@ import reducers from './reducers';
 
 const initialState = {
     series: '0',
-    designFront: '0',
-    designRear: '0',
+    designOutside: '0',
+    designInside: '0',
     fittings: {
         lockType: '0',
-        frontPenType: '0',
-        rearPenType: '0'
+        outsidePenType: '0',
+        insidePenType: '0'
     },
-    materialFront: {
+    materialOutside: {
         linen: '0',
         trim: '0',
         overlays: '0',
         glass: '0'
     },
-    materialRear: {
+    materialInside: {
         linen: '0',
         trim: '0',
         overlays: '0',

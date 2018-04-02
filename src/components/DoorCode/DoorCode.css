@@ -45,13 +45,13 @@
     background-color: rgba(var(--color-fittings-block), 0.15);
 }
 
-.code-part.materialRear,
-.code-part.materialFront {
+.code-part.materialInside,
+.code-part.materialOutside {
     border-color: rgba(var(--color-material-block), 0.3);
 }
 
-.code-part.materialRear:hover,
-.code-part.materialFront:hover {
+.code-part.materialInside:hover,
+.code-part.materialOutside:hover {
     background-color: rgba(var(--color-material-block), 0.15);
 }
 

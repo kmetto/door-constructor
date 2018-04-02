@@ -9,32 +9,32 @@ const DoorCode = ({ code }) => (
     </div>
 
     <div className="design code-part">
-      <span>{code.designFront}</span>
-      <span>{code.designRear}</span>
+      <span>{code.designOutside}</span>
+      <span>{code.designInside}</span>
     </div>
 
     <div className="fittings code-part">
       <span>{code.fittings.lockType}</span>
-      <span>{code.fittings.frontPenType}</span>
-      <span>{code.fittings.rearPenType}</span>
+      <span>{code.fittings.outsidePenType}</span>
+      <span>{code.fittings.insidePenType}</span>
     </div>
 
     <span>(</span>
 
-    <div className="materialFront code-part">
-      <span>{code.materialFront.linen}</span>.
-      <span>{code.materialFront.trim}</span>.
-      <span>{code.materialFront.overlays}</span>.
-      <span>{code.materialFront.glass}</span>
+    <div className="materialOutside code-part">
+      <span>{code.materialOutside.linen}</span>.
+      <span>{code.materialOutside.trim}</span>.
+      <span>{code.materialOutside.overlays}</span>.
+      <span>{code.materialOutside.glass}</span>
     </div>
 
     <span> / </span>
 
-    <div className="materialRear code-part">
-      <span>{code.materialRear.linen}</span>.
-      <span>{code.materialRear.trim}</span>.
-      <span>{code.materialRear.overlays}</span>.
-      <span>{code.materialRear.glass}</span>
+    <div className="materialInside code-part">
+      <span>{code.materialInside.linen}</span>.
+      <span>{code.materialInside.trim}</span>.
+      <span>{code.materialInside.overlays}</span>.
+      <span>{code.materialInside.glass}</span>
     </div>
 
     <span> - </span>

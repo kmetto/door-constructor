@@ -10,22 +10,43 @@ export function setLockType(lock) {
     return lock;
 }
 
-export function setFrontPenType(pen) {
+export function setOutsidePenType(pen) {
     return pen;
 }
 
-export function setRearPenType(pen) {
+export function setInsidePenType(pen) {
     return pen;
 }
 
-export function setMaterialFrontLinen(material) {
+export function setMaterialOutsideLinen(material) {
     return material
 }
 
-export function setMaterialFrontTrim(material) {
+export function setMaterialOutsideTrim(material) {
     return material
 }
 
-export function setMaterialFrontOverlays(material) {
+export function setMaterialOutsideOverlays(material) {
     return material
 }
+
+export function setMaterialOutsideGlass(glass) {
+    return glass
+}
+
+export function setMaterialInsideLinen(material) {
+    return material
+}
+
+export function setMaterialInsideTrim(material) {
+    return material
+}
+
+export function setMaterialInsideOverlays(material) {
+    return material
+}
+
+export function setMaterialInsideGlass(glass) {
+    return glass
+}
+
