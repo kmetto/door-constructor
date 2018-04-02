@@ -14,9 +14,9 @@ const DoorCode = ({ code }) => (
     </div>
 
     <div className="fittings code-part">
-      <span>{code.fittings.lockType}</span>
       <span>{code.fittings.outsidePenType}</span>
       <span>{code.fittings.insidePenType}</span>
+      <span>{code.fittings.lockType}</span>
     </div>
 
     <span>(</span>

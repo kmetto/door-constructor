@@ -2,20 +2,16 @@ export function setSeries(series) {
     return series;
 }
 
-export function setInstallType(install) {
-    return install;
-}
-
-export function setLockType(lock) {
-    return lock;
-}
-
 export function setOutsidePenType(pen) {
     return pen;
 }
 
 export function setInsidePenType(pen) {
     return pen;
+}
+
+export function setLockType(lock) {
+    return lock;
 }
 
 export function setMaterialOutsideLinen(material) {
@@ -48,5 +44,13 @@ export function setMaterialInsideOverlays(material) {
 
 export function setMaterialInsideGlass(glass) {
     return glass
+}
+
+export function setBoxInstallType(install) {
+    return install;
+}
+
+export function setBoxMaterial(material) {
+    return material;
 }
 

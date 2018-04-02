@@ -38,12 +38,6 @@ let App = ({ dispatch }) => {
         <div className="fieldset fittings">
           <legend>Фурнитура</legend>
           <TypeSelector
-            options={data.locks}
-            changeCallback={handleChageType(actions.setLockType)}
-            placeholder="Замок"
-            label="Тип замка"
-          />
-          <TypeSelector
             options={data.knobs}
             changeCallback={handleChageType(actions.setOutsidePenType)}
             placeholder="Наружняя ручка"
@@ -54,6 +48,12 @@ let App = ({ dispatch }) => {
             changeCallback={handleChageType(actions.setInsidePenType)}
             placeholder="Внутренняя ручка"
             label="Тип внутренней ручки"
+          />
+          <TypeSelector
+            options={data.locks}
+            changeCallback={handleChageType(actions.setLockType)}
+            placeholder="Замок"
+            label="Тип замка"
           />
         </div>
 
@@ -105,14 +105,14 @@ let App = ({ dispatch }) => {
           <legend>Коробка</legend>
           <TypeSelector
             options={data.installing}
-            changeCallback={handleChageType(actions.setInstallType)}
+            changeCallback={handleChageType(actions.setBoxInstallType)}
             placeholder="Установка"
             label="Способ установки"
           />
 
           <TypeSelector
-            options={data.installing}
-            changeCallback={handleChageType(actions.setInstallType)}
+            options={data.materialColor}
+            changeCallback={handleChageType(actions.setBoxMaterial)}
             placeholder="Материал и цвет"
             label="Материал и цвет"
           />

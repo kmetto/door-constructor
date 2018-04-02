@@ -119,11 +119,18 @@ function materialInside(state = { linen: '0', trim: '0', overlays: '0', glass: '
 function box(state = { material: '0', instaltionType: '0' }, action) {
     switch (action.type) {
 
-        case types.setInstallType:
+        case types.setBoxInstallType:
             return {
                 ...state,
                 instaltionType: action.result
             }
+
+        case types.setBoxMaterial:
+            return {
+                ...state,
+                material: action.result
+            }
+
         default:
             return state;
     }
