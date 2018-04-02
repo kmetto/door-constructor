@@ -63,6 +63,7 @@ legend {
   padding-bottom: var(--gutter-size-xs);
   padding-top: var(--gutter-size-xs);
   white-space: normal;
+  font-size: var(--font-size-xl);
 }
 
 .design {
