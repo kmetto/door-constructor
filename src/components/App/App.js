@@ -77,6 +77,12 @@ let App = ({ dispatch }) => {
             placeholder="Материал и цвет"
             label="Накладки"
           />
+          <TypeSelector
+            options={data.toning}
+            changeCallback={handleChageType(actions.setMaterialOutsideGlass)}
+            placeholder="Тонировка стеклопакета"
+            label="Тонировка"
+          />
         </div>
 
         <div className="fieldset material">
@@ -98,6 +104,12 @@ let App = ({ dispatch }) => {
             changeCallback={handleChageType(actions.setMaterialInsideOverlays)}
             placeholder="Материал и цвет"
             label="Накладки"
+          />
+          <TypeSelector
+            options={data.toning}
+            changeCallback={handleChageType(actions.setMaterialInsideGlass)}
+            placeholder="Тонировка стеклопакета"
+            label="Тонировка"
           />
         </div>
 
