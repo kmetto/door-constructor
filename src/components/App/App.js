@@ -104,17 +104,16 @@ let App = ({ dispatch }) => {
         <div className="fieldset box">
           <legend>Коробка</legend>
           <TypeSelector
-            options={data.installing}
-            changeCallback={handleChageType(actions.setBoxInstallType)}
-            placeholder="Установка"
-            label="Способ установки"
-          />
-
-          <TypeSelector
             options={data.materialColor}
             changeCallback={handleChageType(actions.setBoxMaterial)}
             placeholder="Материал и цвет"
             label="Материал и цвет"
+          />
+          <TypeSelector
+            options={data.installing}
+            changeCallback={handleChageType(actions.setBoxInstallType)}
+            placeholder="Установка"
+            label="Способ установки"
           />
         </div>
 
