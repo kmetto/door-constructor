@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './DoorCode.css';
 import doorSeries from '../../data/door-series';
 
@@ -58,5 +60,10 @@ const DoorCode = ({ code }) => (
 
   </div>
 );
+
+DoorCode.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  code: PropTypes.object.isRequired,
+};
 
 export default DoorCode;

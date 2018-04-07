@@ -1,56 +1,56 @@
 export function setSeries(series) {
-    return series;
+  return series;
 }
 
 export function setOutsidePenType(pen) {
-    return pen;
+  return pen;
 }
 
 export function setInsidePenType(pen) {
-    return pen;
+  return pen;
 }
 
 export function setLockType(lock) {
-    return lock;
+  return lock;
 }
 
 export function setMaterialOutsideLinen(material) {
-    return material
+  return material;
 }
 
 export function setMaterialOutsideTrim(material) {
-    return material
+  return material;
 }
 
 export function setMaterialOutsideOverlays(material) {
-    return material
+  return material;
 }
 
 export function setMaterialOutsideGlass(glass) {
-    return glass
+  return glass;
 }
 
 export function setMaterialInsideLinen(material) {
-    return material
+  return material;
 }
 
 export function setMaterialInsideTrim(material) {
-    return material
+  return material;
 }
 
 export function setMaterialInsideOverlays(material) {
-    return material
+  return material;
 }
 
 export function setMaterialInsideGlass(glass) {
-    return glass
+  return glass;
 }
 
 export function setBoxInstallType(install) {
-    return install;
+  return install;
 }
 
 export function setBoxMaterial(material) {
-    return material;
+  return material;
 }
 

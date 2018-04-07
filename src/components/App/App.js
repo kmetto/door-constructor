@@ -10,11 +10,10 @@ import { connect } from 'react-redux';
 import { actions } from '../../store/actionFabrick';
 
 let App = ({ dispatch }) => {
-
   function handleChageType(action) {
-    return function(value) {
+    return function (value) {
       dispatch(action(value));
-    }
+    };
   }
 
   return (
@@ -26,7 +25,8 @@ let App = ({ dispatch }) => {
             options={data.doorSeries}
             changeCallback={handleChageType(actions.setSeries)}
             placeholder="Серия дверей"
-            label="Серия дверей" />
+            label="Серия дверей"
+          />
         </div>
 
         <div className="fieldset design">
@@ -142,5 +142,5 @@ let App = ({ dispatch }) => {
   );
 };
 
-App = connect()(App);
-export default App;
+const connectedApp = connect()(App);
+export default connectedApp;

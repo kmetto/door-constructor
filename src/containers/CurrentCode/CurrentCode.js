@@ -1,19 +1,15 @@
-import { connect } from 'react-redux'
-import DoorCode from '../../components/DoorCode/DoorCode'
+import { connect } from 'react-redux';
+import DoorCode from '../../components/DoorCode/DoorCode';
 
-const mapStateToProps = (state) => {
-  return {
-    code: {...state}
-  }
-}
+const mapStateToProps = state => ({
+  code: { ...state },
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {}
-}
+const mapDispatchToProps = dispatch => ({});
 
 const CurrentCode = connect(
   mapStateToProps,
-  mapDispatchToProps
-)(DoorCode)
+  mapDispatchToProps,
+)(DoorCode);
 
-export default CurrentCode
+export default CurrentCode;

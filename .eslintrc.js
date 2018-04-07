@@ -8,7 +8,9 @@ module.exports = {
     ],
     "rules": {
         "react/jsx-filename-extension": 0,
-        "react/prefer-stateless-function": 0
+        "react/prefer-stateless-function": 0,
+        "jsx-a11y/label-has-for": 1,
+        "func-names": 0
     },
     "env": {
         "jest": true,

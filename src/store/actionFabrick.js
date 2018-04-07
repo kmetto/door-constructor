@@ -1,25 +1,31 @@
 import * as actionFunctions from './actions';
 
-let actions = {};
-let types = {};
+const actions = {};
+const types = {};
 
-Object.entries(actionFunctions).forEach((action) => {
-    let name = action[0];
-    let func = action[1];
-    actions[name] = createReduxActionCreator(name, func);
-    types[name] = name;
-});
-
+/** Create redux actionCreators bolierplate
+ * @todo that breaking autosuggestions in files.
+ * need fix that in near future
+ */
 function createReduxActionCreator(name, action) {
-    return function(value) {
-        return {
-            type: name,
-            result: action(value)
-        }
-    }
+  // eslint-disable-next-line func-names
+  return function (value) {
+    return {
+      type: name,
+      result: action(value),
+    };
+  };
 }
 
+Object.entries(actionFunctions).forEach((action) => {
+  const name = action[0];
+  const func = action[1];
+  actions[name] = createReduxActionCreator(name, func);
+  types[name] = name;
+});
+
+
 export {
-    actions,
-    types
+  actions,
+  types,
 };
