@@ -3,7 +3,7 @@ import { Dropdown } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 const TypeSelector = ({
-  options, changeCallback, placeholder, label,
+  options, changeCallback, placeholder, label, value
 }) => (
   <div className="form-unit">
     <label>{label}</label>
@@ -13,8 +13,9 @@ const TypeSelector = ({
       selection
       options={options}
       onChange={(e, component) => {
-            changeCallback(component.value);
-          }}
+        changeCallback(component.value);
+      }}
+      value={value}
     />
   </div>
 );
@@ -27,11 +28,13 @@ TypeSelector.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   changeCallback: PropTypes.func.isRequired,
+  value: PropTypes.string,
 };
 
 TypeSelector.defaultProps = {
   placeholder: '',
   label: '',
+  value: '',
 };
 
 export default TypeSelector;
