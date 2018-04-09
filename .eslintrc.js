@@ -10,7 +10,8 @@ module.exports = {
         "react/jsx-filename-extension": 0,
         "react/prefer-stateless-function": 0,
         "jsx-a11y/label-has-for": 1,
-        "func-names": 0
+        "func-names": 0,
+        "react/prop-types": 1
     },
     "env": {
         "jest": true,
