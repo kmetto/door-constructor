@@ -3,7 +3,7 @@ import { Dropdown } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 const TypeSelector = ({
-  options, changeCallback, placeholder, label, value
+  options, changeCallback, placeholder, label, value,
 }) => (
   <div className="form-unit">
     <label>{label}</label>

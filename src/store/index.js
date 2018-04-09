@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 
 const initialState = {
-  series: '-',
+  series: '0',
   designOutside: '-',
   designInside: '-',
   fittings: {
