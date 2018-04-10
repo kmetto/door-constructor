@@ -12,7 +12,7 @@ const BlockSeries = ({
       changeCallback={callbacks.onSetSeries}
       placeholder="Серия дверей"
       label="Серия дверей"
-      value={values.doorSeriesValue}
+      value={values.doorSeries}
     />
   </div>
 );

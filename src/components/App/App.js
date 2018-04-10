@@ -6,9 +6,8 @@ import './App.css';
 import data from '../../data';
 import { actions } from '../../store/actionFabrick';
 import CurrentCode from '../../containers/CurrentCode/CurrentCode';
-import TypeSelector from '../TypeSelector/TypeSelector';
-import BlockSeries from '../BlockSeries/BlockSeriesContainer';
-import BlockFittings from '../BlockFittings/BlockFittings';
+import BlockSeriesContainer from '../BlockSeries/BlockSeriesContainer';
+import BlockFittingsContainer from '../BlockFittings/BlockFittingsContainer';
 import BlockMaterial from '../BlockMaterial/BlockMaterial';
 import BlockBox from '../BlockBox/BlockBox';
 
@@ -22,13 +21,7 @@ const App = ({ dispatch }) => {
   return (
     <section className="app-base-grid">
       <aside>
-        <BlockSeries />
-        {/* <BlockSeries
-          legend="Серия дверей"
-          callbacks={{ onSetSeries: handleChageType(actions.setSeries) }}
-          options={{ doorSeries: data.doorSeries }}
-          values={{ doorSeriesValue: '0' }}
-        /> */}
+        <BlockSeriesContainer />
 
         <div className="fieldset design">
           <legend>Дизайн</legend>
@@ -36,19 +29,7 @@ const App = ({ dispatch }) => {
           {/* <ImageSelector images={[]} /> */}
         </div>
 
-        <BlockFittings
-          legend="Фурнитура"
-          callbacks={{
-            onSetOutsidePenType: handleChageType(actions.setOutsidePenType),
-            onSetInsidePenType: handleChageType(actions.setInsidePenType),
-            onSetLockType: handleChageType(actions.setLockType),
-          }}
-          options={{
-            knobs: data.knobs,
-            locks: data.locks,
-          }}
-          values={{ doorSeriesValue: '0' }}
-        />
+        <BlockFittingsContainer />
 
         <BlockMaterial
           legend="Полотно снаружи"

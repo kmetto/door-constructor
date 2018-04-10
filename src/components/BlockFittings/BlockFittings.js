@@ -1,20 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { propTypes, defaultProps } from './props';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
-
 const BlockFittings = ({
-  legend, callbacks, options, values,
+  callbacks, options, values,
 }) => (
   <div className="fieldset fittings">
-    <legend>{legend}</legend>
+    <legend>Фурнитура</legend>
 
     <TypeSelector
       options={options.knobs}
       changeCallback={callbacks.onSetOutsidePenType}
       placeholder="Наружняя ручка"
       label="Тип наружней ручки"
-      value="0"
+      value={values.outsidePenType}
     />
 
     <TypeSelector
@@ -22,7 +21,7 @@ const BlockFittings = ({
       changeCallback={callbacks.onSetInsidePenType}
       placeholder="Внутренняя ручка"
       label="Тип внутренней ручки"
-      value="0"
+      value={values.insidePenType}
     />
 
     <TypeSelector
@@ -30,14 +29,12 @@ const BlockFittings = ({
       changeCallback={callbacks.onSetLockType}
       placeholder="Замок"
       label="Тип замка"
-      value="0"
+      value={values.lockType}
     />
   </div>
 );
 
-BlockFittings.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  // code: PropTypes.object.isRequired,
-};
+BlockFittings.propTypes = propTypes;
+BlockFittings.defaultProps = defaultProps;
 
 export default BlockFittings;

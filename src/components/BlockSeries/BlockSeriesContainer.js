@@ -6,7 +6,7 @@ import { actions } from '../../store/actionFabrick';
 const mapStateToProps = state => ({
   options: doorSeries,
   values: {
-    doorSeriesValue: state.series,
+    doorSeries: state.series,
   },
 });
 
