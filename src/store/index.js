@@ -2,33 +2,33 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 
 const initialState = {
-  series: '0',
-  designOutside: '-',
-  designInside: '-',
+  series: '',
+  designOutside: '',
+  designInside: '',
   fittings: {
-    lockType: '-',
-    outsidePenType: '-',
-    insidePenType: '-',
+    lockType: '',
+    outsidePenType: '',
+    insidePenType: '',
   },
   materialOutside: {
-    linen: '-',
-    trim: '-',
-    overlays: '-',
-    glass: '-',
+    linen: '',
+    trim: '',
+    overlays: '',
+    glass: '',
   },
   materialInside: {
-    linen: '-',
-    trim: '-',
-    overlays: '-',
-    glass: '-',
+    linen: '',
+    trim: '',
+    overlays: '',
+    glass: '',
   },
   box: {
-    material: '-',
-    instaltionType: '-',
+    material: '',
+    instaltionType: '',
   },
   size: {
-    height: '-',
-    width: '-',
+    height: '',
+    width: '',
   },
 };
 
