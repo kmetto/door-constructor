@@ -7,7 +7,7 @@ import data from '../../data';
 import { actions } from '../../store/actionFabrick';
 import CurrentCode from '../../containers/CurrentCode/CurrentCode';
 import TypeSelector from '../TypeSelector/TypeSelector';
-import BlockSeries from '../BlockSeries/BlockSeries';
+import BlockSeries from '../BlockSeries/BlockSeriesContainer';
 import BlockFittings from '../BlockFittings/BlockFittings';
 import BlockMaterial from '../BlockMaterial/BlockMaterial';
 import BlockBox from '../BlockBox/BlockBox';
@@ -22,12 +22,13 @@ const App = ({ dispatch }) => {
   return (
     <section className="app-base-grid">
       <aside>
-        <BlockSeries
+        <BlockSeries />
+        {/* <BlockSeries
           legend="Серия дверей"
           callbacks={{ onSetSeries: handleChageType(actions.setSeries) }}
           options={{ doorSeries: data.doorSeries }}
           values={{ doorSeriesValue: '0' }}
-        />
+        /> */}
 
         <div className="fieldset design">
           <legend>Дизайн</legend>
@@ -76,6 +77,7 @@ const App = ({ dispatch }) => {
           }}
           values={{ doorSeriesValue: '0' }}
         />
+
 
         <div className="fieldset size">
           <legend>Размеры</legend>

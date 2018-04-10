@@ -1,15 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { propTypes, defaultProps } from './props';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
-
 const BlockSeries = ({
-  legend, callbacks, options, values,
+  callbacks, options, values,
 }) => (
   <div className="fieldset series">
-    <legend>{legend}</legend>
+    <legend>Серия дверей</legend>
     <TypeSelector
-      options={options.doorSeries}
+      options={options}
       changeCallback={callbacks.onSetSeries}
       placeholder="Серия дверей"
       label="Серия дверей"
@@ -18,9 +17,7 @@ const BlockSeries = ({
   </div>
 );
 
-BlockSeries.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  // code: PropTypes.object.isRequired,
-};
+BlockSeries.propTypes = propTypes;
+BlockSeries.defaultProps = defaultProps;
 
 export default BlockSeries;
