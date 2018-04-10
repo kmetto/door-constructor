@@ -1,77 +1,40 @@
 // @flow
 
 import React from 'react';
-import { connect } from 'react-redux';
 import './App.css';
-import data from '../../data';
-import { actions } from '../../store/actionFabrick';
-import CurrentCode from '../../containers/CurrentCode/CurrentCode';
+import DoorCodeContainer from '../DoorCode/DoorCodeContainer';
 import BlockSeriesContainer from '../BlockSeries/BlockSeriesContainer';
 import BlockFittingsContainer from '../BlockFittings/BlockFittingsContainer';
-import BlockMaterial from '../BlockMaterial/BlockMaterial';
-import BlockBox from '../BlockBox/BlockBox';
+import BlockMaterialContainerOutside from '../BlockMaterial/BlockMaterialContainerOutside';
+import BlockMaterialContainerInside from '../BlockMaterial/BlockMaterialContainerInside';
+import BlockBoxContainer from '../BlockBox/BlockBoxContainer';
 
-const App = ({ dispatch }) => {
-  function handleChageType(action) {
-    return function (value) {
-      dispatch(action(value));
-    };
-  }
+const App = () => (
+  <section className="app-base-grid">
+    <aside>
+      <BlockSeriesContainer />
 
-  return (
-    <section className="app-base-grid">
-      <aside>
-        <BlockSeriesContainer />
+      <div className="fieldset design">
+        <legend>Дизайн</legend>
+        {/* <ImageSelector images={[]} /> */}
+        {/* <ImageSelector images={[]} /> */}
+      </div>
 
-        <div className="fieldset design">
-          <legend>Дизайн</legend>
-          {/* <ImageSelector images={[]} /> */}
-          {/* <ImageSelector images={[]} /> */}
-        </div>
+      <BlockFittingsContainer />
+      <BlockMaterialContainerOutside />
+      <BlockMaterialContainerInside />
+      <BlockBoxContainer />
 
-        <BlockFittingsContainer />
+      <div className="fieldset size">
+        <legend>Размеры</legend>
+        {/* <SizesInput /> */}
+      </div>
 
-        <BlockMaterial
-          legend="Полотно снаружи"
-          callbacks={{
-            onSetMaterialOutsideLinen: handleChageType(actions.setMaterialOutsideLinen),
-            onSetMaterialOutsideTrim: handleChageType(actions.setMaterialOutsideTrim),
-            onSetMaterialOutsideOverlays: handleChageType(actions.setMaterialOutsideOverlays),
-            onSetMaterialOutsideGlass: handleChageType(actions.setMaterialOutsideGlass),
-          }}
-          options={{
-            materialColor: data.materialColor,
-            toning: data.toning,
-          }}
-          values={{ doorSeriesValue: '0' }}
-        />
-
-        <BlockBox
-          legend="Коробка"
-          callbacks={{
-            onSetBoxMaterial: handleChageType(actions.setBoxMaterial),
-            onSetBoxInstallType: handleChageType(actions.setBoxInstallType),
-          }}
-          options={{
-            materialColor: data.materialColor,
-            installing: data.installing,
-          }}
-          values={{ doorSeriesValue: '0' }}
-        />
-
-
-        <div className="fieldset size">
-          <legend>Размеры</legend>
-          {/* <SizesInput /> */}
-        </div>
-
-      </aside>
-      <section>
-        <CurrentCode />
-      </section>
+    </aside>
+    <section>
+      <DoorCodeContainer />
     </section>
-  );
-};
+  </section>
+);
 
-const connectedApp = connect()(App);
-export default connectedApp;
+export default App;

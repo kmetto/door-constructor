@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import DoorCode from '../../components/DoorCode/DoorCode';
+import DoorCode from './DoorCode';
 
 const mapStateToProps = state => ({
   code: { ...state },

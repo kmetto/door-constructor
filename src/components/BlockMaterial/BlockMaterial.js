@@ -1,50 +1,46 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
 
 const BlockMaterial = ({
-  legend, callbacks, options, values,
+  callbacks, options, values, legend,
 }) => (
   <div className="fieldset material">
     <legend>{legend}</legend>
 
     <TypeSelector
       options={options.materialColor}
-      changeCallback={callbacks.onSetMaterialOutsideLinen}
+      changeCallback={callbacks.onSetMaterialLinen}
       placeholder="Материал и цвет"
       label="Полотно"
-      value="0"
+      value={values.materialLinen}
     />
 
     <TypeSelector
       options={options.materialColor}
-      changeCallback={callbacks.onSetMaterialOutsideTrim}
+      changeCallback={callbacks.onSetMaterialTrim}
       placeholder="Материал и цвет"
       label="Наличник"
-      value="0"
+      value={values.materialTrim}
     />
 
     <TypeSelector
       options={options.materialColor}
-      changeCallback={callbacks.onSetMaterialOutsideOverlays}
+      changeCallback={callbacks.onSetMaterialOverlays}
       placeholder="Материал и цвет"
-      value="0"
+      label="Накладка"
+      value={values.materialOverlays}
     />
 
     <TypeSelector
       options={options.toning}
-      changeCallback={callbacks.onSetMaterialOutsideGlass}
+      changeCallback={callbacks.onSetMaterialGlass}
       placeholder="Тонировка стеклопакета"
-      value="0"
+      label="Стеклопакет"
+      value={values.materialGlass}
     />
 
   </div>
 );
-
-BlockMaterial.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  // code: PropTypes.object.isRequired,
-};
 
 export default BlockMaterial;
