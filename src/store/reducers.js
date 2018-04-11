@@ -143,6 +143,16 @@ function size(state = { height: '0', width: '0' }, action) {
   }
 }
 
+function activeBlock(state = '', action) {
+  switch (action.type) {
+    case types.setActiveBlock:
+      return action.result;
+
+    default:
+      return state;
+  }
+}
+
 
 const reducers = combineReducers({
   series,
@@ -153,6 +163,7 @@ const reducers = combineReducers({
   materialInside,
   box,
   size,
+  activeBlock,
 });
 
 export default reducers;

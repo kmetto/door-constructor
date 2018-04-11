@@ -4,6 +4,7 @@ import { actions } from '../../store/actionFabrick';
 import materialColor from '../../data/material-color';
 import toning from '../../data/toning';
 
+const blockName = 'BLOCK_MATERIAL_INSIDE';
 const mapStateToProps = state => ({
   options: {
     materialColor,
@@ -16,6 +17,7 @@ const mapStateToProps = state => ({
     materialGlass: state.materialOutside.glass,
   },
   legend: 'Полотно снаружи',
+  activity: state.activeBlock === blockName,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -24,6 +26,8 @@ const mapDispatchToProps = dispatch => ({
     onSetMaterialTrim: (val) => { dispatch(actions.setMaterialOutsideTrim(val)); },
     onSetMaterialOverlays: (val) => { dispatch(actions.setMaterialOutsideOverlays(val)); },
     onSetMaterialGlass: (val) => { dispatch(actions.setMaterialOutsideGlass(val)); },
+    onFocus: () => { dispatch(actions.setActiveBlock(blockName)); },
+    onBlur: () => { dispatch(actions.setActiveBlock('')); },
   },
 });
 

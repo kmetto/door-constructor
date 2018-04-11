@@ -7,8 +7,11 @@ export const propTypes = {
     text: PropTypes.string.isRequired,
   }).isRequired).isRequired,
   values: PropTypes.object,
+  activity: PropTypes.bool,
+  onFocus: PropTypes.func,
 };
 
 export const defaultProps = {
   values: {},
+  onFocus: () => {},
 };

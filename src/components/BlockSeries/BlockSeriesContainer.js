@@ -3,16 +3,20 @@ import BlockSeries from './BlockSeries';
 import doorSeries from '../../data/door-series';
 import { actions } from '../../store/actionFabrick';
 
+const blockName = 'BLOCK_SERIES';
+
 const mapStateToProps = state => ({
   options: doorSeries,
   values: {
     doorSeries: state.series,
   },
+  activity: state.activeBlock === blockName,
 });
 
 const mapDispatchToProps = dispatch => ({
   callbacks: {
     onSetSeries: (val) => { dispatch(actions.setSeries(val)); },
+    onFocus: () => { dispatch(actions.setActiveBlock(blockName)); },
   },
 });
 

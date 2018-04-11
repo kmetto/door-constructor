@@ -54,3 +54,6 @@ export function setBoxMaterial(material) {
   return material;
 }
 
+export function setActiveBlock(activeBlock) {
+  return activeBlock;
+}

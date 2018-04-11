@@ -1,11 +1,16 @@
 import React from 'react';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
+function getBlockClasses(active) {
+  let defaultClasess = 'fieldset material';
+  if (active) defaultClasess += ' hightlight';
+  return defaultClasess;
+}
 
 const BlockMaterial = ({
-  callbacks, options, values, legend,
+  callbacks, options, values, legend, activity,
 }) => (
-  <div className="fieldset material">
+  <div className={getBlockClasses(activity)}>
     <legend>{legend}</legend>
 
     <TypeSelector
@@ -14,6 +19,7 @@ const BlockMaterial = ({
       placeholder="Материал и цвет"
       label="Полотно"
       value={values.materialLinen}
+      focusCallback={callbacks.onFocus}
     />
 
     <TypeSelector
