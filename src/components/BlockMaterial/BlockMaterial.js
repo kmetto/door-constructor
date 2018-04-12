@@ -28,6 +28,7 @@ const BlockMaterial = ({
       placeholder="Материал и цвет"
       label="Наличник"
       value={values.materialTrim}
+      focusCallback={callbacks.onFocus}
     />
 
     <TypeSelector
@@ -36,6 +37,7 @@ const BlockMaterial = ({
       placeholder="Материал и цвет"
       label="Накладка"
       value={values.materialOverlays}
+      focusCallback={callbacks.onFocus}
     />
 
     <TypeSelector
@@ -44,6 +46,7 @@ const BlockMaterial = ({
       placeholder="Тонировка стеклопакета"
       label="Стеклопакет"
       value={values.materialGlass}
+      focusCallback={callbacks.onFocus}
     />
 
   </div>

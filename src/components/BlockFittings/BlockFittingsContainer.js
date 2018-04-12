@@ -4,6 +4,7 @@ import { actions } from '../../store/actionFabrick';
 import knobs from '../../data/knobs';
 import locks from '../../data/locks';
 
+const blockName = 'BLOCK_FITTINGS';
 const mapStateToProps = state => ({
   options: {
     knobs,
@@ -14,6 +15,7 @@ const mapStateToProps = state => ({
     insidePenType: state.fittings.insidePenType,
     lockType: state.fittings.lockType,
   },
+  activity: state.activeBlock === blockName,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -21,6 +23,7 @@ const mapDispatchToProps = dispatch => ({
     onSetOutsidePenType: (val) => { dispatch(actions.setOutsidePenType(val)); },
     onSetInsidePenType: (val) => { dispatch(actions.setInsidePenType(val)); },
     onSetLockType: (val) => { dispatch(actions.setLockType(val)); },
+    onFocus: () => { dispatch(actions.setActiveBlock(blockName)); },
   },
 });
 

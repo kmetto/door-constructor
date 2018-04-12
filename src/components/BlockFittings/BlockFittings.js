@@ -2,10 +2,16 @@ import React from 'react';
 import { propTypes, defaultProps } from './props';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
+function getBlockClasses(active) {
+  let defaultClasess = 'fieldset fittings';
+  if (active) defaultClasess += ' hightlight';
+  return defaultClasess;
+}
+
 const BlockFittings = ({
-  callbacks, options, values,
+  callbacks, options, values, activity,
 }) => (
-  <div className="fieldset fittings">
+  <div className={getBlockClasses(activity)}>
     <legend>Фурнитура</legend>
 
     <TypeSelector
@@ -14,6 +20,7 @@ const BlockFittings = ({
       placeholder="Наружняя ручка"
       label="Тип наружней ручки"
       value={values.outsidePenType}
+      focusCallback={callbacks.onFocus}
     />
 
     <TypeSelector
@@ -22,6 +29,7 @@ const BlockFittings = ({
       placeholder="Внутренняя ручка"
       label="Тип внутренней ручки"
       value={values.insidePenType}
+      focusCallback={callbacks.onFocus}
     />
 
     <TypeSelector
@@ -30,6 +38,7 @@ const BlockFittings = ({
       placeholder="Замок"
       label="Тип замка"
       value={values.lockType}
+      focusCallback={callbacks.onFocus}
     />
   </div>
 );

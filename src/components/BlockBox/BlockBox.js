@@ -1,10 +1,16 @@
 import React from 'react';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
+function getBlockClasses(active) {
+  let defaultClasess = 'fieldset box';
+  if (active) defaultClasess += ' hightlight';
+  return defaultClasess;
+}
+
 const BlockBox = ({
-  callbacks, options, values,
+  callbacks, options, values, activity,
 }) => (
-  <div className="fieldset box">
+  <div className={getBlockClasses(activity)}>
     <legend>Коробка</legend>
 
     <TypeSelector
@@ -13,6 +19,7 @@ const BlockBox = ({
       placeholder="Серия дверей"
       label="Серия дверей"
       value={values.boxMaterial}
+      focusCallback={callbacks.onFocus}
     />
 
     <TypeSelector
@@ -21,6 +28,7 @@ const BlockBox = ({
       placeholder="Серия дверей"
       label="Серия дверей"
       value={values.boxInstallType}
+      focusCallback={callbacks.onFocus}
     />
 
   </div>
