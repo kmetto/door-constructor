@@ -3,15 +3,28 @@ import PropTypes from 'prop-types';
 
 import './DoorCode.css';
 import doorSeries from '../../data/door-series';
+import blocks from '../../data/blocks';
 
 function getSeriesName(id, allSeries) {
   const seriesName = allSeries.find(s => s.value === id);
   return seriesName ? seriesName.text : '-';
 }
 
-const DoorCode = ({ code }) => (
+function addHightlightClass(blockName, currentActive, otherClasses = []) {
+  let defaultClasess = otherClasses.join(' ');
+  if (blockName === currentActive) defaultClasess += ' hightlight';
+  return defaultClasess;
+}
+
+const DoorCode = ({ code, onHover }) => (
   <div className="door-code">
-    <div className="series code-part">
+    <div
+      className={addHightlightClass(blocks.BLOCK_SERIES, code.activeBlock, [
+        'series',
+        'code-part',
+      ])}
+      onMouseEnter={() => onHover(blocks.BLOCK_SERIES)}
+    >
       <span>{getSeriesName(code.series, doorSeries)}</span>
     </div>
 
@@ -20,7 +33,13 @@ const DoorCode = ({ code }) => (
       <span>{code.designInside || '-'}</span>
     </div>
 
-    <div className="fittings code-part">
+    <div
+      className={addHightlightClass(blocks.BLOCK_FITTINGS, code.activeBlock, [
+        'fittings',
+        'code-part',
+      ])}
+      onMouseEnter={() => onHover(blocks.BLOCK_FITTINGS)}
+    >
       <span>{code.fittings.outsidePenType || '-'}</span>
       <span>{code.fittings.insidePenType || '-'}</span>
       <span>{code.fittings.lockType || '-'}</span>
@@ -28,7 +47,13 @@ const DoorCode = ({ code }) => (
 
     <span>(</span>
 
-    <div className="materialOutside code-part">
+    <div
+      className={addHightlightClass(blocks.BLOCK_MATERIAL_OUTSIDE, code.activeBlock, [
+        'materialOutside',
+        'code-part',
+      ])}
+      onMouseEnter={() => onHover(blocks.BLOCK_MATERIAL_OUTSIDE)}
+    >
       <span>{code.materialOutside.linen || '-'}</span>.
       <span>{code.materialOutside.trim || '-'}</span>.
       <span>{code.materialOutside.overlays || '-'}</span>.
@@ -37,7 +62,13 @@ const DoorCode = ({ code }) => (
 
     <span> / </span>
 
-    <div className="materialInside code-part">
+    <div
+      className={addHightlightClass(blocks.BLOCK_MATERIAL_INSIDE, code.activeBlock, [
+        'materialInside',
+        'code-part',
+      ])}
+      onMouseEnter={() => onHover(blocks.BLOCK_MATERIAL_INSIDE)}
+    >
       <span>{code.materialInside.linen || '-'}</span>.
       <span>{code.materialInside.trim || '-'}</span>.
       <span>{code.materialInside.overlays || '-'}</span>.
@@ -46,7 +77,13 @@ const DoorCode = ({ code }) => (
 
     <span> - </span>
 
-    <div className="box code-part">
+    <div
+      className={addHightlightClass(blocks.BLOCK_BOX, code.activeBlock, [
+        'box',
+        'code-part',
+      ])}
+      onMouseEnter={() => onHover(blocks.BLOCK_BOX)}
+    >
       <span>{code.box.material || '-'}</span>
       <span>{code.box.instaltionType || '-'}</span>
     </div>
@@ -57,7 +94,6 @@ const DoorCode = ({ code }) => (
     </div>
 
     <span>)</span>
-
   </div>
 );
 

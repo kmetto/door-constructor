@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import BlockSeries from './BlockSeries';
 import doorSeries from '../../data/door-series';
 import { actions } from '../../store/actionFabrick';
+import blocks from '../../data/blocks';
 
-const blockName = 'BLOCK_SERIES';
+const blockName = blocks.BLOCK_SERIES;
 
 const mapStateToProps = state => ({
   options: doorSeries,

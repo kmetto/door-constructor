@@ -3,8 +3,9 @@ import BlockMaterial from './BlockMaterial';
 import { actions } from '../../store/actionFabrick';
 import materialColor from '../../data/material-color';
 import toning from '../../data/toning';
+import blocks from '../../data/blocks';
 
-const blockName = 'BLOCK_MATERIAL_INSIDE';
+const blockName = blocks.BLOCK_MATERIAL_INSIDE;
 const mapStateToProps = state => ({
   options: {
     materialColor,

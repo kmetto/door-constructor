@@ -3,8 +3,9 @@ import BlockBox from './BlockBox';
 import { actions } from '../../store/actionFabrick';
 import materialColor from '../../data/material-color';
 import installing from '../../data/installing';
+import blocks from '../../data/blocks';
 
-const blockName = 'BLOCK_FITTINGS';
+const blockName = blocks.BLOCK_BOX;
 const mapStateToProps = state => ({
   options: {
     materialColor,

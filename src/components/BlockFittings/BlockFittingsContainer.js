@@ -3,8 +3,9 @@ import BlockFittings from './BlockFittings';
 import { actions } from '../../store/actionFabrick';
 import knobs from '../../data/knobs';
 import locks from '../../data/locks';
+import blocks from '../../data/blocks';
 
-const blockName = 'BLOCK_FITTINGS';
+const blockName = blocks.BLOCK_FITTINGS;
 const mapStateToProps = state => ({
   options: {
     knobs,

@@ -24,7 +24,8 @@
     border-color: rgba(var(--color-series-block), 1);
 }
 
-.code-part.series:hover {
+.code-part.series:hover,
+.code-part.series.hightlight {
     background-color: rgba(var(--color-series-block), 0.3);
 }
 
@@ -33,7 +34,8 @@
 
 }
 
-.code-part.design:hover {
+.code-part.design:hover,
+.code-part.design.hightlight {
     background-color: rgba(var(--color-design-block), 0.25);
 }
 
@@ -41,7 +43,8 @@
     border-color: rgba(var(--color-fittings-block), 0.3);
 }
 
-.code-part.fittings:hover {
+.code-part.fittings:hover,
+.code-part.fittings.hightlight {
     background-color: rgba(var(--color-fittings-block), 0.15);
 }
 
@@ -51,7 +54,9 @@
 }
 
 .code-part.materialInside:hover,
-.code-part.materialOutside:hover {
+.code-part.materialOutside:hover,
+.code-part.materialInside.hightlight,
+.code-part.materialOutside.hightlight {
     background-color: rgba(var(--color-material-block), 0.15);
 }
 
@@ -59,7 +64,8 @@
     border-color: rgba(var(--color-box-block), 0.3);
 }
 
-.code-part.box:hover {
+.code-part.box:hover,
+.code-part.box.hightlight {
     background-color: rgba(var(--color-box-block), 0.15);
 }
 
@@ -67,6 +73,7 @@
     border-color: rgba(var(--color-size-block), 0.3);
 }
 
-.code-part.size:hover {
+.code-part.size:hover,
+.code-part.size.hightlight {
     background-color: rgba(var(--color-size-block), 0.15);
 }
