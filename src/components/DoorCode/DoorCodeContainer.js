@@ -10,9 +10,9 @@ const mapDispatchToProps = dispatch => ({
   onHover: (blockName) => { dispatch(actions.setActiveBlock(blockName)); },
 });
 
-const CurrentCode = connect(
+const DoorCodeContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(DoorCode);
 
-export default CurrentCode;
+export default DoorCodeContainer;
