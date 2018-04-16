@@ -11,15 +11,20 @@ function series(state = '0', action) {
   }
 }
 
-function designOutside(state = '0', action) {
+function designs(state = { designOutside: '0', designInside: '0' }, action) {
   switch (action.type) {
-    default:
-      return state;
-  }
-}
+    case types.setDesignInside:
+      return {
+        ...state,
+        designInside: action.result,
+      };
 
-function designInside(state = '0', action) {
-  switch (action.type) {
+    case types.setDesignOutside:
+      return {
+        ...state,
+        designOutside: action.result,
+      };
+
     default:
       return state;
   }
@@ -168,8 +173,7 @@ function activeBlock(state = '', action) {
 
 const reducers = combineReducers({
   series,
-  designOutside,
-  designInside,
+  designs,
   fittings,
   materialOutside,
   materialInside,

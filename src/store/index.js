@@ -3,8 +3,10 @@ import reducers from './reducers';
 
 const initialState = {
   series: '',
-  designOutside: '',
-  designInside: '',
+  designs: {
+    designOutside: '',
+    designInside: '',
+  },
   fittings: {
     lockType: '',
     outsidePenType: '',

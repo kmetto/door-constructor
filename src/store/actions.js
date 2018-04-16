@@ -64,3 +64,11 @@ export function setWidth(width) {
 export function setActiveBlock(activeBlock) {
   return activeBlock;
 }
+
+export function setDesignInside(design) {
+  return design;
+}
+
+export function setDesignOutside(design) {
+  return design;
+}
