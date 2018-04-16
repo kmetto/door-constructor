@@ -9,25 +9,18 @@ import BlockMaterialContainerOutside from '../BlockMaterial/BlockMaterialContain
 import BlockMaterialContainerInside from '../BlockMaterial/BlockMaterialContainerInside';
 import BlockBoxContainer from '../BlockBox/BlockBoxContainer';
 import BlockSizesContainer from '../BlockSizes/BlockSizesContainer';
+import BlockDesignContainer from '../BlockDesign/BlockDesignContainer';
 
 const App = () => (
   <section className="app-base-grid">
     <aside>
       <BlockSeriesContainer />
-
-      <div className="fieldset design">
-        <legend>Дизайн</legend>
-        {/* <ImageSelector images={[]} /> */}
-        {/* <ImageSelector images={[]} /> */}
-      </div>
-
+      <BlockDesignContainer />
       <BlockFittingsContainer />
       <BlockMaterialContainerOutside />
       <BlockMaterialContainerInside />
       <BlockBoxContainer />
-
       <BlockSizesContainer />
-
     </aside>
     <section>
       <DoorCodeContainer />

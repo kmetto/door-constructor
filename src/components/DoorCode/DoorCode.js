@@ -28,9 +28,15 @@ const DoorCode = ({ code, onHover }) => (
       <span>{getSeriesName(code.series, doorSeries)}</span>
     </div>
 
-    <div className="design code-part">
-      <span>{code.designOutside || '-'}</span>
-      <span>{code.designInside || '-'}</span>
+    <div
+      className={addHightlightClass(blocks.BLOCK_DESIGN, code.activeBlock, [
+        'design',
+        'code-part',
+      ])}
+      onMouseEnter={() => onHover(blocks.BLOCK_DESIGN)}
+    >
+      <span>{code.designs.designOutside || '-'}</span>
+      <span>{code.designs.designInside || '-'}</span>
     </div>
 
     <div

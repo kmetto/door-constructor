@@ -7,6 +7,7 @@ import locks from './locks';
 import materialColor from './material-color';
 import doorSeries from './door-series';
 import toning from './toning';
+import designs from './designs';
 
 export default {
   glass,
@@ -16,4 +17,5 @@ export default {
   materialColor,
   doorSeries,
   toning,
+  designs,
 };
