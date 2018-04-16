@@ -88,9 +88,15 @@ const DoorCode = ({ code, onHover }) => (
       <span>{code.box.instaltionType || '-'}</span>
     </div>
 
-    <div className="size code-part">
-      <span>{code.size.height || '-'}</span>
-      <span>{code.size.width || '-'}</span>
+    <div
+      className={addHightlightClass(blocks.BLOCK_SIZES, code.activeBlock, [
+        'size',
+        'code-part',
+      ])}
+      onMouseEnter={() => onHover(blocks.BLOCK_SIZES)}
+    >
+      <span>{Math.round(code.size.height * 0.01) || '-'}</span>
+      <span>{Math.round(code.size.width * 0.01) || '-'}</span>
     </div>
 
     <span>)</span>

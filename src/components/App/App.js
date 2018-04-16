@@ -8,6 +8,7 @@ import BlockFittingsContainer from '../BlockFittings/BlockFittingsContainer';
 import BlockMaterialContainerOutside from '../BlockMaterial/BlockMaterialContainerOutside';
 import BlockMaterialContainerInside from '../BlockMaterial/BlockMaterialContainerInside';
 import BlockBoxContainer from '../BlockBox/BlockBoxContainer';
+import BlockSizesContainer from '../BlockSizes/BlockSizesContainer';
 
 const App = () => (
   <section className="app-base-grid">
@@ -25,10 +26,7 @@ const App = () => (
       <BlockMaterialContainerInside />
       <BlockBoxContainer />
 
-      <div className="fieldset size">
-        <legend>Размеры</legend>
-        {/* <SizesInput /> */}
-      </div>
+      <BlockSizesContainer />
 
     </aside>
     <section>

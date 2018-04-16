@@ -138,6 +138,18 @@ function box(state = { material: '0', instaltionType: '0' }, action) {
 
 function size(state = { height: '0', width: '0' }, action) {
   switch (action.type) {
+    case types.setWidth:
+      return {
+        ...state,
+        width: action.result,
+      };
+
+    case types.setHeigth:
+      return {
+        ...state,
+        height: action.result,
+      };
+
     default:
       return state;
   }

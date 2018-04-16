@@ -54,6 +54,13 @@ export function setBoxMaterial(material) {
   return material;
 }
 
+export function setHeigth(height) {
+  return height;
+}
+export function setWidth(width) {
+  return width;
+}
+
 export function setActiveBlock(activeBlock) {
   return activeBlock;
 }
