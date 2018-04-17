@@ -1,3 +1,5 @@
+import copy from 'clipboard-copy';
+
 export function setSeries(series) {
   return series;
 }
@@ -71,4 +73,8 @@ export function setDesignInside(design) {
 
 export function setDesignOutside(design) {
   return design;
+}
+
+export function copyToClipboard(code) {
+  copy(code);
 }

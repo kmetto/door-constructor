@@ -10,6 +10,7 @@ import BlockMaterialContainerInside from '../BlockMaterial/BlockMaterialContaine
 import BlockBoxContainer from '../BlockBox/BlockBoxContainer';
 import BlockSizesContainer from '../BlockSizes/BlockSizesContainer';
 import BlockDesignContainer from '../BlockDesign/BlockDesignContainer';
+import CopyToClipboardBtn from '../CopyToClipboardBtn/CopyToClipboardBtn';
 
 const App = () => (
   <section className="app-base-grid">
@@ -24,6 +25,7 @@ const App = () => (
     </aside>
     <section>
       <DoorCodeContainer />
+      <CopyToClipboardBtn />
     </section>
   </section>
 );
