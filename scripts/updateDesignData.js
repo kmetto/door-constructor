@@ -36,7 +36,7 @@ async function makeDesignsData(pathToImages) {
     return {
       value: onlyName,
       text: onlyName,
-      path: `${pathToImages}/${name}`,
+      path: `.${`${pathToImages}/${name}`.split('/src')[1]}`,
     };
   });
 
