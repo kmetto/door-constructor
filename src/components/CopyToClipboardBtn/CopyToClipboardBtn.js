@@ -8,7 +8,7 @@ import { actions } from '../../store/actionFabrick';
 const clipboardBtn = ({ copyAction, currentCode, codeReady }) => (
   <div>
     {
-      true &&
+      codeReady &&
       <Popup
         trigger={
           <Button.Group>
