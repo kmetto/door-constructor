@@ -23,9 +23,12 @@ const App = () => (
       <BlockBoxContainer />
       <BlockSizesContainer />
     </aside>
-    <section>
+    <section className="top-bar">
       <DoorCodeContainer />
       <CopyToClipboardBtn />
+    </section>
+    <section className="main-area">
+      {/* content */}
     </section>
   </section>
 );

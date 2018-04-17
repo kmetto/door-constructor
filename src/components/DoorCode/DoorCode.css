@@ -1,11 +1,11 @@
 .door-code {
     width: 100%;
-    border-bottom: var(--main-border-style);
-    padding: var(--gutter-size-x);
+    /* padding: var(--gutter-size-x); */
     text-align: center;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
   }
 
 .door-code span {

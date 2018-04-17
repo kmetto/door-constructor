@@ -10,10 +10,10 @@
 
   --color-series-block: 245, 229, 29;
   --color-design-block: 255, 155, 113;
---color-fittings-block: 232, 72, 85;
---color-material-block: 27, 153, 183;
-     --color-box-block: 70, 163, 87;
-    --color-size-block: 133, 87, 161;
+  --color-fittings-block: 232, 72, 85;
+  --color-material-block: 27, 153, 183;
+  --color-box-block: 70, 163, 87;
+  --color-size-block: 133, 87, 161;
 }
 
 #root {
@@ -25,8 +25,11 @@
 .app-base-grid {
   display: grid;
   height: 100%;
-  grid-template-columns: minmax(320px, 1fr) 3fr;
-  grid-template-rows: 100%;
+  grid-template-columns: minmax(320px, 0.7fr) 3fr;
+  grid-template-rows: 62px 1fr;
+  grid-template-areas:
+    "aside topbar"
+    "aside main"
 }
 
 aside {
@@ -35,6 +38,19 @@ aside {
   border-right: var(--main-border-style);
   height: 100%;
   overflow: auto;
+  grid-area: aside;
+}
+
+.top-bar {
+  grid-area: topbar;
+  display: flex;
+  border-bottom: var(--main-border-style);
+  align-items: center;
+  padding: 0 var(--gutter-size-x);
+}
+
+.main-area {
+  grid-area: main;
 }
 
 /* form-unit styles */

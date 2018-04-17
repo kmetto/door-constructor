@@ -1,13 +1,29 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Button, Icon, Popup } from 'semantic-ui-react';
 import { actions } from '../../store/actionFabrick';
 
-const clipboardBtn = ({ copyAction, currentCode }) => (
+
+const clipboardBtn = ({ copyAction, currentCode, codeReady }) => (
   <div>
-    <button onClick={() => copyAction(currentCode)}> Copy </button>
+    {
+      true &&
+      <Popup
+        trigger={
+          <Button.Group>
+            <Button icon onClick={() => copyAction(currentCode)}>
+              <Icon name="clipboard" />
+            </Button>
+          </Button.Group>
+      }
+        content="Нажмите для копирования"
+        position="bottom center"
+      />
+    }
   </div>
 );
+
 
 function getCurrentCode(state) {
   return [
@@ -22,24 +38,27 @@ function getCurrentCode(state) {
       state.materialOutside.trim,
       state.materialOutside.overlays,
       state.materialOutside.glass,
-    ].join('.'),
+    ].map(i => (i || '?')).join('.'),
     '/', [
       state.materialInside.linen,
       state.materialInside.trim,
       state.materialInside.overlays,
       state.materialInside.glass,
-    ].join('.'),
+    ].map(i => (i || '?')).join('.'),
     '-',
     state.box.material,
     state.box.instaltionType,
-    state.size.height,
     state.size.width,
+    state.size.height,
     ')',
-  ].join(' ');
+  ].map(i => (i || '?')).join('');
 }
 
 function mapStateToProps(state) {
-  return { currentCode: getCurrentCode(state) };
+  return {
+    currentCode: getCurrentCode(state),
+    codeReady: getCurrentCode(state).match(/\?/g) === null,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
