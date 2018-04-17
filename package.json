@@ -23,7 +23,8 @@
     "flow stop": "flow stop",
     "flow status": "flow status",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -x 'src/**/*.test.js'",
-    "update:designs": "node ./scripts/updateDesignData.js"
+    "update:designs": "node ./scripts/updateDesignData.js",
+    "upload": "surge --domain door-code.surge.sh --project ./build"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
