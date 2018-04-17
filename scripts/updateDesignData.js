@@ -34,8 +34,8 @@ async function makeDesignsData(pathToImages) {
   const designData = designNames.map((name) => {
     const onlyName = name.split('.').slice(0, -1).join();
     return {
-      value: onlyName,
-      text: onlyName,
+      value: onlyName.toUpperCase(),
+      text: onlyName.toUpperCase(),
       path: `.${`${pathToImages}/${name}`.split('/src')[1]}`,
     };
   });

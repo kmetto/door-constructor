@@ -5,28 +5,28 @@ import type { DesignItem } from '../types/DesignItem';
 
 const designs: Array<DesignItem> = [
   {
-    'value': 'a1',
-    'text': 'a1',
+    'value': 'A1',
+    'text': 'A1',
     'path': './assests/designs/a1.svg'
   },
   {
-    'value': 'a2',
-    'text': 'a2',
+    'value': 'A2',
+    'text': 'A2',
     'path': './assests/designs/a2.svg'
   },
   {
-    'value': 'a3',
-    'text': 'a3',
+    'value': 'A3',
+    'text': 'A3',
     'path': './assests/designs/a3.svg'
   },
   {
-    'value': 'a4',
-    'text': 'a4',
+    'value': 'A4',
+    'text': 'A4',
     'path': './assests/designs/a4.svg'
   },
   {
-    'value': 'a5',
-    'text': 'a5',
+    'value': 'A5',
+    'text': 'A5',
     'path': './assests/designs/a5.svg'
   }
 ];
