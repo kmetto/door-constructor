@@ -11,6 +11,7 @@ import BlockBoxContainer from '../BlockBox/BlockBoxContainer';
 import BlockSizesContainer from '../BlockSizes/BlockSizesContainer';
 import BlockDesignContainer from '../BlockDesign/BlockDesignContainer';
 import CopyToClipboardBtn from '../CopyToClipboardBtn/CopyToClipboardBtn';
+import MainView from '../MainView/MainView';
 
 const App = () => (
   <section className="app-base-grid">
@@ -28,6 +29,7 @@ const App = () => (
       <CopyToClipboardBtn />
     </section>
     <section className="main-area">
+      <MainView />
       {/* content */}
     </section>
   </section>
